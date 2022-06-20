@@ -1,14 +1,25 @@
 package application;
 
 import entities.Aluno;
+import entities.Login;
 import entities.Secretaria;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Login usuario = new Login();
         Secretaria secretaria = new Secretaria();
         Aluno aluno = new Aluno();
+
+        System.out.print("Nome: ");
+        usuario.setNome(sc.nextLine());
+        System.out.print("Senha: ");
+        usuario.setSenha(sc.nextLine());
+
+        System.out.println();
+        System.out.println("Olá " + usuario.getNome());
+        System.out.println();
 
         int operacao;
         do {
